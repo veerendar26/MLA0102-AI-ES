@@ -56,7 +56,9 @@ END WHILE
 IF Depth = 0 THEN RETURN value
 
 IF IsMax THEN
+
     FOR each child DO
+    
         α ← max(α, AlphaBeta(child))
         IF β ≤ α THEN BREAK
     END FOR
