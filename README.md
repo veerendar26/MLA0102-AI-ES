@@ -34,3 +34,16 @@ DFS_Visit(Node)
         END IF
     END FOR
 END DFS_Visit
+
+
+#####GreedySearch(Graph, Start, Goal)
+
+CREATE priority queue PQ
+INSERT Start using heuristic
+
+WHILE PQ not empty DO
+    Node ← REMOVE lowest heuristic node
+    PRINT Node
+    IF Node = Goal THEN EXIT
+    INSERT neighbors into PQ
+END WHILE
