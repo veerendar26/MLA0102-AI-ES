@@ -49,3 +49,20 @@ WHILE PQ not empty DO
     IF Node = Goal THEN EXIT
     INSERT neighbors into PQ
 END WHILE
+
+
+#####Alpha beta pruning AlphaBeta(Node, Depth, α, β, IsMax)
+
+IF Depth = 0 THEN RETURN value
+
+IF IsMax THEN
+    FOR each child DO
+        α ← max(α, AlphaBeta(child))
+        IF β ≤ α THEN BREAK
+    END FOR
+ELSE
+    FOR each child DO
+        β ← min(β, AlphaBeta(child))
+        IF β ≤ α THEN BREAK
+    END FOR
+END IF
