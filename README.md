@@ -43,6 +43,7 @@ CREATE priority queue PQ
 INSERT Start using heuristic
 
 WHILE PQ not empty DO
+
     Node ← REMOVE lowest heuristic node
     PRINT Node
     IF Node = Goal THEN EXIT
