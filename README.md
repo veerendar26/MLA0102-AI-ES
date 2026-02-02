@@ -17,7 +17,8 @@ END DFS_Visit
 
 
 
-Mini-max Minimax(Node, Depth, IsMax)
+
+#####Mini-max Minimax(Node, Depth, IsMax)
 
 CREATE empty set Visited
 
