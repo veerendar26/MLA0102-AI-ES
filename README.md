@@ -39,6 +39,7 @@ END DFS_Visit
 #####GreedySearch(Graph, Start, Goal)
 
 CREATE priority queue PQ
+
 INSERT Start using heuristic
 
 WHILE PQ not empty DO
