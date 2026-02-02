@@ -68,3 +68,26 @@ ELSE
         IF β ≤ α THEN BREAK
     END FOR
 END IF
+
+
+#####Water Jug problem
+
+CREATE queue Q
+CREATE set Visited
+
+ENQUEUE (0,0)
+ADD (0,0) to Visited
+
+WHILE Q not empty DO
+    (x,y) ← DEQUEUE Q
+
+    IF x = Target OR y = Target THEN
+        PRINT "Target Reached"
+        EXIT
+    END IF
+
+    GENERATE possible states
+    ADD unvisited states to Q
+END WHILE
+
+PRINT "Target Not Possible"  
